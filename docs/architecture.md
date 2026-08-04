@@ -14,7 +14,7 @@ The design is based on several observed patterns from mature skills projects:
 
 The repository follows these patterns from established skill libraries and agent workflow repos:
 
-| Pattern | Source model | EARL decision |
+| Pattern | Source model | ERL decision |
 | --- | --- | --- |
 | Standards-shaped skill packages | Agent Skills specification and Anthropic skills | Every skill is a folder with `SKILL.md`; optional `references/`, `scripts/`, and `assets/` are loaded only when needed. |
 | Thin routers | mattpocock/skills and Superpowers | `skills/flows/` skills route and gate work; they should not duplicate the detailed workflow of atomic skills. |
@@ -26,7 +26,7 @@ The catalog is the machine-readable registry. Skill bodies remain the agent-faci
 
 ## Layer Model
 
-EARL Research Skills use four layers:
+ERL Research Skills use four layers:
 
 | Layer | Role | Examples |
 | --- | --- | --- |
@@ -96,7 +96,7 @@ Avoid criteria like "write a useful summary." They are too easy to satisfy prema
 
 ## Public Curation
 
-Do not copy third-party skill prose into this repository unless the license and provenance are explicitly compatible. Prefer original EARL skills that borrow structural ideas, not text.
+Do not copy third-party skill prose into this repository unless the license and provenance are explicitly compatible. Prefer original ERL skills that borrow structural ideas, not text.
 
 Each accepted skill should have:
 

@@ -1,16 +1,16 @@
 # Governance
 
-EARL Research Skills is an open-source project developed and maintained by EARL Lab.
+ERL Research Skills is an open-source project developed and maintained by ERL Lab.
 
 ## Stewardship
 
-EARL Lab is responsible for the repository roadmap, scope, quality standards, releases, and maintainer appointments. Public use and contribution are open, but contribution does not by itself grant EARL Lab membership, maintainer status, or decision authority.
+ERL Lab is responsible for the repository roadmap, scope, quality standards, releases, and maintainer appointments. Public use and contribution are open, but contribution does not by itself grant ERL Lab membership, maintainer status, or decision authority.
 
 ## Roles
 
 ### Maintainers
 
-Maintainers are appointed by EARL Lab. They:
+Maintainers are appointed by ERL Lab. They:
 
 - review and merge contributions;
 - enforce repository scope, evidence standards, and release criteria;
@@ -22,13 +22,13 @@ Repository paths and current review responsibility are recorded in [`.github/COD
 
 ### Contributors
 
-Anyone may open an issue, join a discussion, or submit a pull request. Accepted work is attributed according to the actual contribution. Contributors do not need to be members of EARL Lab.
+Anyone may open an issue, join a discussion, or submit a pull request. Accepted work is attributed according to the actual contribution. Contributors do not need to be members of ERL Lab.
 
 ## Decisions
 
 Routine fixes and focused skill changes are decided through pull-request review. Changes that materially affect architecture, governance, licensing, compatibility, or repository-wide policy should begin as a GitHub Discussion or design issue before implementation.
 
-Maintainers should state the reason when rejecting or requesting major changes to a contribution. EARL Lab retains final responsibility for scope and releases.
+Maintainers should state the reason when rejecting or requesting major changes to a contribution. ERL Lab retains final responsibility for scope and releases.
 
 ## Releases and Maturity
 
@@ -46,4 +46,4 @@ Skills and reusable research workflows are developed publicly by default. Creden
 
 ## Changes to Governance
 
-Governance changes require maintainer review and explicit approval from EARL Lab. Proposed changes should explain the problem, affected roles, compatibility impact, and transition plan.
+Governance changes require maintainer review and explicit approval from ERL Lab. Proposed changes should explain the problem, affected roles, compatibility impact, and transition plan.

@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/UCL-EARL/skills/catalog.schema.json",
-  "title": "EARL Research Skills Catalog",
+  "$id": "https://github.com/UCL-ERL/skills/catalog.schema.json",
+  "title": "ERL Research Skills Catalog",
   "type": "object",
   "required": [
     "version",

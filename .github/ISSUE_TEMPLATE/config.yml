@@ -1,8 +1,8 @@
 blank_issues_enabled: false
 contact_links:
   - name: Research workflow questions and ideas
-    url: https://github.com/UCL-EARL/skills/discussions
+    url: https://github.com/UCL-ERL/skills/discussions
     about: Use GitHub Discussions for open-ended usage questions, workflow ideas, and community conversation.
   - name: Sensitive security report
-    url: https://github.com/UCL-EARL/skills/security/advisories/new
+    url: https://github.com/UCL-ERL/skills/security/advisories/new
     about: Report vulnerabilities privately instead of opening a public issue.

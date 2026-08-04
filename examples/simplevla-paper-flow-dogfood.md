@@ -1,6 +1,6 @@
 # SimpleVLA-RL Paper Flow Dogfooding
 
-This case study uses a local PDF, `SimpleVLA.pdf`, as a realistic dogfooding sample for EARL paper skills.
+This case study uses a local PDF, `SimpleVLA.pdf`, as a realistic dogfooding sample for ERL paper skills.
 
 The goal is not to judge the paper as accepted or rejected. The goal is to test whether the skills produce useful, evidence-disciplined artifacts on a real Robotics & AI paper.
 
@@ -159,7 +159,7 @@ No clear fatal flaw is visible from this PDF-only pass. The paper has a coherent
 - LaTeX/source package was not inspected.
 - Review is based on the PDF text and a small visual rendering sample, not on rerunning experiments.
 
-## What This Revealed About EARL Research Skills
+## What This Revealed About ERL Research Skills
 
 ### What Worked
 
@@ -180,6 +180,6 @@ No clear fatal flaw is visible from this PDF-only pass. The paper has a coherent
 
 ## Verdict
 
-As a dogfooding sample, SimpleVLA-RL is a good stress test for EARL Research Skills because it contains all the risks our repo is meant to handle: strong empirical claims, simulation and real-world evidence, robotics benchmarks, code/provenance concerns, broad related work, and failure modes.
+As a dogfooding sample, SimpleVLA-RL is a good stress test for ERL Research Skills because it contains all the risks our repo is meant to handle: strong empirical claims, simulation and real-world evidence, robotics benchmarks, code/provenance concerns, broad related work, and failure modes.
 
 The repo should add this kind of case study pattern as a standard maturity artifact before promoting paper skills from `draft` to `beta`.

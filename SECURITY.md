@@ -8,7 +8,7 @@ Security fixes are applied to the current default branch. This repository does n
 
 Do not open a public issue for vulnerabilities, exposed credentials, unsafe command execution, path traversal, prompt injection that can cause material harm, or other sensitive security concerns.
 
-Use [GitHub Private Vulnerability Reporting](https://github.com/UCL-EARL/skills/security/advisories/new) to report the issue privately. Include:
+Use [GitHub Private Vulnerability Reporting](https://github.com/UCL-ERL/skills/security/advisories/new) to report the issue privately. Include:
 
 - the affected skill, script, or workflow;
 - the expected and observed behavior;
@@ -16,4 +16,4 @@ Use [GitHub Private Vulnerability Reporting](https://github.com/UCL-EARL/skills/
 - the potential impact; and
 - any suggested mitigation.
 
-Do not include real credentials, restricted data, or personal information in a report. EARL Lab maintainers will assess scope, coordinate a repair, and disclose the issue when appropriate.
+Do not include real credentials, restricted data, or personal information in a report. ERL Lab maintainers will assess scope, coordinate a repair, and disclose the issue when appropriate.

@@ -1,24 +1,24 @@
 # Research Notes
 
-These notes summarize the external repository scan used to organize EARL Research Skills. The goal is to borrow structure and workflow patterns, not third-party prose.
+These notes summarize the external repository scan used to organize ERL Research Skills. The goal is to borrow structure and workflow patterns, not third-party prose.
 
 ## Primary Sources Reviewed
 
 ### Skill Repository Sources
 
-| Source | Organization pattern | What EARL adopts |
+| Source | Organization pattern | What ERL adopts |
 | --- | --- | --- |
 | [Agent Skills specification](https://agentskills.io/specification) | A skill is a directory with `SKILL.md`; optional `scripts/`, `references/`, and `assets/`; progressive disclosure keeps the main skill small. | Keep every skill self-contained and put detailed contracts in optional resource directories. |
 | [Agent Skills best practices](https://agentskills.io/best-practices) | Skills should be grounded in real tasks, scoped as coherent units, include output templates, and validate their work. | Require concrete artifacts, completion criteria, and validation loops before maturity promotion. |
 | [anthropics/skills](https://github.com/anthropics/skills) | Demonstrates official-style skill folders, a spec/template split, and self-contained examples across domains. | Keep `templates/`, `docs/`, and `skills/` separate; make the repo useful as both catalog and authoring reference. |
 | [mattpocock/skills](https://github.com/mattpocock/skills) | Distinguishes user-invoked routers from model-invoked reusable discipline; emphasizes small composable engineering skills. | Keep `rai-*` flows thin and route to focused skills instead of creating mega-skills. |
 | [obra/superpowers](https://github.com/obra/superpowers) | Treats skills as a methodology with phase gates, planning, verification, and review workflows. | Use phase gates for research work: do not ideate, write, or polish past missing evidence. |
-| [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) | Maps skills to a lifecycle and command entry points, then lists all skills by phase and purpose. | Organize EARL skills around the research lifecycle: `DISCOVER -> MAP -> IDEATE -> DESIGN -> WRITE -> AUDIT -> PACKAGE`. |
+| [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) | Maps skills to a lifecycle and command entry points, then lists all skills by phase and purpose. | Organize ERL skills around the research lifecycle: `DISCOVER -> MAP -> IDEATE -> DESIGN -> WRITE -> AUDIT -> PACKAGE`. |
 | [DayuanJiang/next-ai-draw-io](https://github.com/DayuanJiang/next-ai-draw-io) | Shows that diagram generation needs layout planning, shape semantics, and visual validation. | Treat figure generation as a tool skill with a scientific figure contract, not as image prompting alone. |
 
 ### Paper Production Sources
 
-| Source | Organization pattern | What EARL adopts |
+| Source | Organization pattern | What ERL adopts |
 | --- | --- | --- |
 | [NeurIPS Paper Checklist](https://neurips.cc/public/guides/PaperChecklist) | Uses explicit questions for assumptions, limitations, experiments, reproducibility, and broader impacts. | Add gates for claim-evidence support, limitations, experiment reporting, and overclaim control. |
 | [NeurIPS Code and Data Submission Policy](https://neurips.cc/public/guides/CodeSubmissionPolicy) | Treats code, data, environments, scripts, and instructions as part of reproducible paper artifacts. | Add `experiment-provenance-auditor` and provenance checks for configs, seeds, logs, code versions, and generated figures. |
@@ -41,7 +41,7 @@ These notes summarize the external repository scan used to organize EARL Researc
 6. **Research skills need stronger evidence gates than general coding skills.** The recurring Robotics & AI failure modes are hallucinated citations, weak baselines, invalid evaluation, unclear sim-to-real claims, and diagrams that imply false mechanisms.
 7. **Paper production needs late-stage gates.** A strong paper workflow must cover benchmark fairness, result provenance, response-to-reviewers, limitations, and submission packaging, not only writing polish.
 
-## EARL Design Decision
+## ERL Design Decision
 
 Use four skill types:
 

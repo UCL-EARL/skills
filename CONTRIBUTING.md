@@ -1,10 +1,10 @@
 # Contributing
 
-Thanks for helping improve EARL Research Skills.
+Thanks for helping improve ERL Research Skills.
 
 This repository is meant to stay practical, easy to review, and safe to reuse across research and engineering projects. Please keep contributions focused and executable.
 
-Open-ended usage questions and workflow ideas belong in [GitHub Discussions](https://github.com/UCL-EARL/skills/discussions). Use issues for concrete bugs, proposals, and documentation problems. By participating, you agree to the [Code of Conduct](./CODE_OF_CONDUCT.md) and project [Governance](./GOVERNANCE.md).
+Open-ended usage questions and workflow ideas belong in [GitHub Discussions](https://github.com/UCL-ERL/skills/discussions). Use issues for concrete bugs, proposals, and documentation problems. By participating, you agree to the [Code of Conduct](./CODE_OF_CONDUCT.md) and project [Governance](./GOVERNANCE.md).
 
 ## What Makes a Good Skill
 
@@ -36,7 +36,7 @@ python scripts/validate_forward_tests.py
 - Any external tools, papers, APIs, or datasets it relies on.
 - How you tested or sanity-checked the workflow.
 
-Accepted contributions are attributed according to the work performed. A contribution does not imply EARL Lab membership or maintainer status.
+Accepted contributions are attributed according to the work performed. A contribution does not imply ERL Lab membership or maintainer status.
 
 ## Choose the Right Layer
 
@@ -98,4 +98,4 @@ Before requesting review, check that:
 
 ## Review and Decisions
 
-EARL Lab maintainers review contributions for scope, correctness, evidence discipline, compatibility, and maintainability. Repository-wide architecture, governance, license, and compatibility changes should be discussed before implementation. See [GOVERNANCE.md](./GOVERNANCE.md) for decision responsibilities.
+ERL Lab maintainers review contributions for scope, correctness, evidence discipline, compatibility, and maintainability. Repository-wide architecture, governance, license, and compatibility changes should be discussed before implementation. See [GOVERNANCE.md](./GOVERNANCE.md) for decision responsibilities.

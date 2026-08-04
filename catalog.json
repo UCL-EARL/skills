@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "name": "EARL Research Skills",
-  "description": "An open-source research operating system for Robotics & AI, developed and maintained by EARL Lab.",
-  "homepage": "https://github.com/UCL-EARL/skills",
+  "name": "ERL Research Skills",
+  "description": "An open-source research operating system for Robotics & AI, developed and maintained by ERL Lab.",
+  "homepage": "https://github.com/UCL-ERL/skills",
   "license": "MIT",
   "compatibility": [
     "codex",
@@ -10,7 +10,7 @@
     "agent-skills-style"
   ],
   "maintainers": [
-    "EARL Lab"
+    "ERL Lab"
   ],
   "contributors": [
     "ylhaichen"

@@ -1,11 +1,11 @@
 cff-version: 1.2.0
-message: "If you use EARL Research Skills in research, please cite the repository."
-title: "EARL Research Skills"
+message: "If you use ERL Research Skills in research, please cite the repository."
+title: "ERL Research Skills"
 type: software
 authors:
   - family-names: "Yang"
     given-names: "Liuhaichen"
     alias: "ylhaichen"
-repository-code: "https://github.com/UCL-EARL/skills"
-url: "https://github.com/UCL-EARL/skills"
+repository-code: "https://github.com/UCL-ERL/skills"
+url: "https://github.com/UCL-ERL/skills"
 license: MIT

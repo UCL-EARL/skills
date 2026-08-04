@@ -12,7 +12,7 @@ from urllib.parse import unquote
 
 
 ROOT = Path(__file__).resolve().parents[1]
-EXPECTED_HOMEPAGE = "https://github.com/UCL-EARL/skills"
+EXPECTED_HOMEPAGE = "https://github.com/UCL-ERL/skills"
 REQUIRED_PATHS = (
     ".github/CODEOWNERS",
     "CITATION.cff",
@@ -23,12 +23,6 @@ REQUIRED_PATHS = (
     "LICENSE",
     "README.md",
     "SECURITY.md",
-    "docs/assets/earl/avatar-square-dark-512.png",
-    "docs/assets/earl/masthead-dark.svg",
-    "docs/assets/earl/masthead-light.svg",
-    "docs/assets/earl/social-preview.png",
-    "docs/assets/earl/social-preview.svg",
-    "docs/brand-assets.md",
     "docs/catalog.md",
 )
 TEXT_SUFFIXES = {".cff", ".json", ".md", ".py", ".txt", ".yml", ".yaml"}
@@ -73,6 +67,10 @@ def main() -> int:
         errors.append(f"catalog.homepage must be {EXPECTED_HOMEPAGE}")
 
     legacy_markers = ("UCL-" + "RAI", "github.com/UCL-" + "RAI")
+    legacy_brand_pattern = re.compile(
+        r"\bE" + r"ARL\b|Embodied Autonomy|UCL-E" + r"ARL|earl-lab",
+        flags=re.IGNORECASE,
+    )
     for path in tracked_files():
         if not path.is_file() or path.suffix.lower() not in TEXT_SUFFIXES:
             continue
@@ -85,6 +83,10 @@ def main() -> int:
         for marker in legacy_markers:
             if marker.casefold() in text.casefold():
                 errors.append(f"legacy branding in {relative}: {marker}")
+
+        legacy_brand = legacy_brand_pattern.search(text)
+        if legacy_brand:
+            errors.append(f"legacy branding in {relative}: {legacy_brand.group(0)}")
 
         private_path = PRIVATE_PATH_RE.search(text)
         if private_path:

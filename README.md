@@ -1,21 +1,15 @@
 <div align="center">
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./docs/assets/earl/masthead-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="./docs/assets/earl/masthead-light.svg">
-  <img src="./docs/assets/earl/masthead-light.svg" alt="EARL Lab - Embodied Autonomy and Robot Learning Lab" width="900">
-</picture>
-
-# EARL Research Skills
+# ERL Research Skills
 
 **An open-source research operating system for Robotics & AI.**
 
-Developed and maintained by **EARL Lab** within **UCL Robotics & AI**.
+Developed and maintained by **[ERL Lab](https://ucl-erl.github.io/) (Embodied Reinforcement Learning Lab)** within **UCL Robotics & AI**.
 
-[![Validate](https://github.com/UCL-EARL/skills/actions/workflows/validate.yml/badge.svg)](https://github.com/UCL-EARL/skills/actions/workflows/validate.yml)
-[![License: MIT](https://img.shields.io/badge/license-MIT-38214F.svg)](./LICENSE)
-[![Skills](https://img.shields.io/badge/skills-28-31D6F2.svg)](./docs/catalog.md)
-[![Forward tests](https://img.shields.io/badge/forward_tests-20-983BFE.svg)](./forward-tests/)
+[![Validate](https://github.com/UCL-ERL/skills/actions/workflows/validate.yml/badge.svg)](https://github.com/UCL-ERL/skills/actions/workflows/validate.yml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
+[![Skills](https://img.shields.io/badge/skills-28-informational.svg)](./docs/catalog.md)
+[![Forward tests](https://img.shields.io/badge/forward_tests-20-success.svg)](./forward-tests/)
 
 [Get Started](#get-started) | [Flagship Workflows](#flagship-workflows) | [System Design](#system-design) | [Catalog](./docs/catalog.md) | [Contribute](#contribute)
 
@@ -23,7 +17,7 @@ Developed and maintained by **EARL Lab** within **UCL Robotics & AI**.
 
 ## What This Is
 
-EARL Research Skills is a public, composable skill system for AI coding agents and research assistants. It connects literature discovery, evidence synthesis, research planning, remote experiments, paper writing, scientific review, submission, and Robotics & AI engineering into inspectable workflows.
+ERL Research Skills is a public, composable skill system for AI coding agents and research assistants. It connects literature discovery, evidence synthesis, research planning, remote experiments, paper writing, scientific review, submission, and Robotics & AI engineering into inspectable workflows.
 
 This is not a prompt dump. Each skill has a defined trigger, procedure, output artifact, completion criteria, catalog entry, and validation path.
 
@@ -87,7 +81,7 @@ Router skills select the minimum useful path. Atomic skills perform focused task
 Clone the repository and validate the system:
 
 ```bash
-git clone https://github.com/UCL-EARL/skills.git
+git clone https://github.com/UCL-ERL/skills.git
 cd skills
 python scripts/validate_catalog.py
 python scripts/validate_forward_tests.py
@@ -141,7 +135,7 @@ Browse all 28 skills in the [Skill Catalog](./docs/catalog.md).
 
 The `rai-*` prefix means **Robotics & AI**. These stable skill IDs describe the domain and are independent of repository ownership.
 
-Read [docs/architecture.md](./docs/architecture.md), [docs/curation-policy.md](./docs/curation-policy.md), [docs/quality-rubric.md](./docs/quality-rubric.md), and [docs/brand-assets.md](./docs/brand-assets.md) for the full design, acceptance rules, and public identity contract.
+Read [docs/architecture.md](./docs/architecture.md), [docs/curation-policy.md](./docs/curation-policy.md), and [docs/quality-rubric.md](./docs/quality-rubric.md) for the full design and acceptance rules.
 
 ## Quality and Status
 
@@ -168,19 +162,21 @@ The catalog currently contains 28 `draft` skills and 20 forward-test fixtures. `
 `-- .github/                     # CI, ownership, and contribution workflows
 ```
 
-## About EARL Lab
+## About ERL Lab
 
-**EARL Lab** is an Embodied Autonomy and Robot Learning research group within **UCL Robotics & AI at University College London**. Its research focuses on:
+**ERL Lab (Embodied Reinforcement Learning Lab)** is a research group within **UCL Robotics & AI at University College London**. Its research focuses on:
 
-- **Embodied Autonomy**: perception, reasoning, planning, and action under real-world uncertainty.
+- **Embodied Reinforcement Learning**: reinforcement learning for robotic skill acquisition, decision-making, and adaptation under real-world uncertainty.
 - **Generalizable Robot Learning**: transferable, composable, and continually improving robot skills.
 - **Foundation Models for Robotics**: VLA models, multimodal models, and embodied agents for robotic learning and evaluation.
 
 Rigorous evaluation, reproducibility, and open-source research are shared principles across these directions.
 
+Visit the [ERL Lab homepage](https://ucl-erl.github.io/) for research themes, people, projects, and updates.
+
 ## Contribute
 
-EARL Research Skills accepts public issues, discussions, and pull requests. External contribution is open; roadmap, scope, quality standards, releases, and maintainer appointments remain governed by EARL Lab.
+ERL Research Skills accepts public issues, discussions, and pull requests. External contribution is open; roadmap, scope, quality standards, releases, and maintainer appointments remain governed by ERL Lab.
 
 Read [CONTRIBUTING.md](./CONTRIBUTING.md), [GOVERNANCE.md](./GOVERNANCE.md), and [CODE_OF_CONDUCT.md](./CODE_OF_CONDUCT.md) before contributing.
 

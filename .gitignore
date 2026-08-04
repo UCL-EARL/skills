@@ -8,5 +8,5 @@ __pycache__/
 dist/
 build/
 
-# Local source package; selected public assets live under docs/assets/earl/.
-EARL-Logo-Assets/
+# Local logo source packages are not part of this repository.
+*-Logo-Assets/
