@@ -38,6 +38,23 @@ python scripts/validate_forward_tests.py
 
 Accepted contributions are attributed according to the work performed. A contribution does not imply ERL Lab membership or maintainer status.
 
+## Add an Agent Instruction Contract
+
+Agent instruction contracts belong under `agent-instructions/<profile>/`, not
+under `skills/`, and must not be added to `catalog.json`. Add the profile to
+`agent-instructions/README.md` and explain:
+
+- which recurring agent behavior it changes;
+- whether it is a base profile, overlay, or client-specific contract;
+- how it differs from existing profiles;
+- its discovery, location, and precedence assumptions; and
+- any source, license, or adaptation provenance.
+
+Instruction contracts must avoid machine-specific permissions, private paths,
+credentials, and rules that silently override project safety or validation.
+When two rules conflict, document the intended precedence instead of asking
+users to stack both files blindly.
+
 ## Choose the Right Layer
 
 Before adding a skill, decide which layer it belongs to:
@@ -87,6 +104,7 @@ Before requesting review, check that:
 - The contribution does not include copyrighted text that cannot be redistributed.
 - The contribution does not include credentials, restricted data, confidential research material, or personal information.
 - New external sources are recorded as provenance and are compatible with the repository license.
+- New instruction contracts have a distinct behavioral purpose and documented precedence.
 
 ## Style
 

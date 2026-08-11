@@ -1,6 +1,27 @@
-# Skills Architecture
+# Agent Capability Architecture
 
-This repository is a skills system for Robotics & AI research work, not a loose collection of prompts.
+This repository is an agent capability system for Robotics & AI research work, not a loose collection of prompts.
+
+## Repository Surface Model
+
+The repository separates two surfaces with different activation semantics:
+
+| Surface | Activation | Contract |
+| --- | --- | --- |
+| `skills/` | Selected or invoked when a task matches a trigger. | Defines a workflow, artifact, and completion criteria. |
+| `agent-instructions/` | Loaded persistently at user, workspace, or repository scope. | Defines cross-task behavior, constraints, and execution defaults. |
+
+A persistent instruction file is not a `reference` skill. Reference skills are
+loaded to support a matching task; instruction contracts govern every task in
+their effective scope. For that reason, instruction profiles are indexed in
+`agent-instructions/README.md` and never registered in `catalog.json`.
+
+File names such as `AGENTS.md` and `CODEX.md` are deployment targets, not a
+portable discovery standard. Each profile must state its client and placement
+assumptions. Users must follow the precedence rules of their agent client and
+merge project-specific instructions instead of overwriting them blindly.
+
+## Skill System
 
 The design is based on several observed patterns from mature skills projects:
 
@@ -83,6 +104,17 @@ skills/<area>/<skill-name>/
 Keep `SKILL.md` concise and procedural. Put long rubrics, detailed checklists, and tool-specific contracts in `references/`, then link to them from `SKILL.md` with clear load conditions.
 
 Do not add per-skill README files by default. The skill itself is the entry point.
+
+Agent instruction profiles use a separate shape:
+
+```text
+agent-instructions/<profile>/
+`-- AGENTS.md or CODEX.md
+```
+
+The file should be usable as a deployment artifact. Cross-profile selection,
+installation, compatibility, and precedence guidance belongs in
+`agent-instructions/README.md`, not inside every contract.
 
 ## Completion Criteria
 

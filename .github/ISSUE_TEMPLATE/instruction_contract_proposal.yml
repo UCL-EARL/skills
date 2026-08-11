@@ -1,0 +1,41 @@
+name: Agent instruction contract proposal
+description: Propose a persistent agent behavior contract for this repository.
+title: "[Instruction contract]: "
+labels:
+  - instruction-contract
+body:
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Behavior problem
+      description: Which recurring agent behavior should this contract change?
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Intended scope
+      description: Is this a base profile, domain overlay, or client-specific contract?
+    validations:
+      required: true
+  - type: textarea
+    id: placement
+    attributes:
+      label: Client and placement
+      description: Which client loads it, from which file name and scope, and with what precedence?
+    validations:
+      required: true
+  - type: textarea
+    id: distinction
+    attributes:
+      label: Difference from existing profiles
+      description: Explain overlap, conflicts, and why an existing contract cannot be extended safely.
+    validations:
+      required: true
+  - type: textarea
+    id: provenance
+    attributes:
+      label: Validation and provenance
+      description: How will behavior be checked, and what source or license applies to the proposed text?
+    validations:
+      required: true

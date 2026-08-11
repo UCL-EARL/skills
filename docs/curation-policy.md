@@ -1,6 +1,6 @@
 # Curation Policy
 
-This repository accepts skills that help Robotics & AI researchers do concrete work more reliably.
+This repository accepts skills and agent instruction contracts that help Robotics & AI researchers do concrete work more reliably.
 
 ## Accept
 
@@ -8,6 +8,7 @@ This repository accepts skills that help Robotics & AI researchers do concrete w
 - Skills with narrow triggers and clear completion criteria.
 - Skills that explicitly handle citation, provenance, or evidence when scientific claims are involved.
 - Tool workflows that include validation, not just usage instructions.
+- Persistent instruction contracts that address a distinct recurring agent behavior and document their scope and precedence.
 
 ## Reject
 
@@ -16,6 +17,22 @@ This repository accepts skills that help Robotics & AI researchers do concrete w
 - Private paths, credentials, lab-only assumptions, or undocumented external services.
 - Large third-party content copied without license/provenance review.
 - Mega-skills that should be split into a router plus atomic skills.
+- Instruction files that are only personality prompts, duplicate an existing profile, or depend on private machine permissions.
+
+## Instruction Contracts
+
+Instruction contracts are curated separately from skills. They do not use
+skill frontmatter, maturity labels, forward-test fixtures, or `catalog.json`.
+Each accepted profile must include:
+
+- a distinct behavioral objective;
+- an intended usage mode and client-placement assumption;
+- explicit interaction with project-specific and higher-precedence rules;
+- no credentials, private paths, or hidden environment access; and
+- redistribution rights compatible with the repository license.
+
+Profiles with conflicting defaults should be presented as alternatives unless
+a deterministic precedence rule makes composition safe.
 
 ## Maturity
 

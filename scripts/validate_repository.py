@@ -15,6 +15,7 @@ ROOT = Path(__file__).resolve().parents[1]
 EXPECTED_HOMEPAGE = "https://github.com/UCL-ERL/skills"
 REQUIRED_PATHS = (
     ".github/CODEOWNERS",
+    "agent-instructions/README.md",
     "CITATION.cff",
     "CODE_OF_CONDUCT.md",
     "CONTRIBUTING.md",
@@ -65,6 +66,30 @@ def main() -> int:
     catalog = json.loads((ROOT / "catalog.json").read_text(encoding="utf-8"))
     if catalog.get("homepage") != EXPECTED_HOMEPAGE:
         errors.append(f"catalog.homepage must be {EXPECTED_HOMEPAGE}")
+
+    instruction_root = ROOT / "agent-instructions"
+    instruction_index = (instruction_root / "README.md").read_text(encoding="utf-8")
+    instruction_profiles = sorted(
+        path for path in instruction_root.iterdir() if path.is_dir() and not path.name.startswith(".")
+    )
+    if not instruction_profiles:
+        errors.append("agent-instructions must contain at least one profile")
+
+    for profile in instruction_profiles:
+        targets = [
+            profile / filename
+            for filename in ("AGENTS.md", "CODEX.md")
+            if (profile / filename).is_file()
+        ]
+        if len(targets) != 1:
+            errors.append(
+                f"instruction profile {profile.name} must contain exactly one AGENTS.md or CODEX.md"
+            )
+            continue
+
+        index_target = f"./{profile.name}/{targets[0].name}"
+        if index_target not in instruction_index:
+            errors.append(f"instruction profile missing from index: {index_target}")
 
     legacy_markers = ("UCL-" + "RAI", "github.com/UCL-" + "RAI")
     legacy_brand_pattern = re.compile(

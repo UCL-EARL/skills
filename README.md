@@ -2,24 +2,46 @@
 
 # ERL Research Skills
 
-**An open-source research operating system for Robotics & AI.**
+**Composable research workflows and persistent agent instructions for Robotics & AI.**
 
 Developed and maintained by **[ERL Lab](https://ucl-erl.github.io/) (Embodied Reinforcement Learning Lab)** within **UCL Robotics & AI**.
 
 [![Validate](https://github.com/UCL-ERL/skills/actions/workflows/validate.yml/badge.svg)](https://github.com/UCL-ERL/skills/actions/workflows/validate.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
 [![Skills](https://img.shields.io/badge/skills-28-informational.svg)](./docs/catalog.md)
+[![Instruction contracts](https://img.shields.io/badge/instruction_contracts-3-blueviolet.svg)](./agent-instructions/README.md)
 [![Forward tests](https://img.shields.io/badge/forward_tests-20-success.svg)](./forward-tests/)
 
-[Get Started](#get-started) | [Flagship Workflows](#flagship-workflows) | [System Design](#system-design) | [Catalog](./docs/catalog.md) | [Contribute](#contribute)
+[Get Started](#get-started) | [Agent Instructions](#agent-instruction-contracts) | [Flagship Workflows](#flagship-workflows) | [Catalog](./docs/catalog.md) | [Contribute](#contribute)
 
 </div>
 
 ## What This Is
 
-ERL Research Skills is a public, composable skill system for AI coding agents and research assistants. It connects literature discovery, evidence synthesis, research planning, remote experiments, paper writing, scientific review, submission, and Robotics & AI engineering into inspectable workflows.
+ERL Research Skills is a public agent capability system for AI coding agents and research assistants. It connects literature discovery, evidence synthesis, research planning, remote experiments, paper writing, scientific review, submission, and Robotics & AI engineering into inspectable workflows.
 
-This is not a prompt dump. Each skill has a defined trigger, procedure, output artifact, completion criteria, catalog entry, and validation path.
+This is not a prompt dump. The repository separates task-specific **skills** from persistent **agent instruction contracts** so users can choose both what an agent can do and how it should behave.
+
+## Agent Instruction Contracts
+
+> **Skills define what workflow to run. Instruction contracts define how the agent behaves throughout the work.**
+
+| Contract | Use it when | Distinctive behavior |
+| --- | --- | --- |
+| [Universal Engineering Execution Contract](./agent-instructions/universal-engineering-contract/AGENTS.md) | Process overhead and scope expansion are slowing delivery. | Runs the smallest end-to-end vertical slice, uses proportional verification, and stops when the requested outcome works. |
+| [Codex Engineering Rules](./agent-instructions/codex-engineering-rules/CODEX.md) | Debugging or code changes need stronger engineering discipline. | Reads before writing, exposes assumptions, preserves local style, finds root causes, and verifies behavior. |
+| [Universal Survey Writing and Audit Guide](./agent-instructions/survey-writing-audit/CODEX.md) | A survey needs persistent drafting, revision, and final-audit discipline. | Maintains one source of truth and narrative backbone while controlling evidence, claims, redundancy, global consistency, and submission hygiene. |
+
+These are persistent instruction policies, not invokable skills and not entries in `catalog.json`. Read the [selection and installation guide](./agent-instructions/README.md) before copying or merging one into a project.
+
+For example, a survey workspace can load the Survey Writing and Audit Guide as
+its persistent contract, then invoke task workflows only when needed:
+
+```text
+persistent behavior: survey-writing-audit/CODEX.md
+task workflow:       rai-research-flow -> survey-synthesis-builder
+focused audits:      citation-integrity-auditor / manuscript-structure-auditor
+```
 
 ## Flagship Workflows
 
@@ -121,10 +143,20 @@ The default is `quick`. Heavier modes are opt-in so routine research work stays 
 | Audit and review | Citations, benchmarks, provenance, paper-code consistency, limitations, red-team review. |
 | Package and respond | Reviewer responses, LaTeX submission checks, portable experiment dossiers. |
 | Engineer | Robotics & AI coding, debugging, testing, experiment hygiene, and reproducibility. |
+| Control agent behavior | Reusable execution contracts for scope, reasoning, code changes, debugging, and verification. |
 
 Browse all 28 skills in the [Skill Catalog](./docs/catalog.md).
 
 ## System Design
+
+The repository has two complementary product surfaces:
+
+| Surface | Responsibility |
+| --- | --- |
+| `skills/` | Task-specific workflows loaded or invoked when their trigger matches. |
+| `agent-instructions/` | Persistent behavioral contracts loaded at project or user scope. |
+
+Skills use four internal layers:
 
 | Layer | Responsibility |
 | --- | --- |
@@ -145,7 +177,7 @@ Read [docs/architecture.md](./docs/architecture.md), [docs/curation-policy.md](.
 - Public reuse: no credentials, private paths, restricted data, or undocumented services.
 - Inspectable provenance: record external inspiration without copying third-party prose.
 
-The catalog currently contains 28 `draft` skills and 20 forward-test fixtures. `draft` is an explicit maturity label, not a claim of production stability. Skills move to `beta` or `stable` only when supported by realistic use evidence under the [quality rubric](./docs/quality-rubric.md).
+The repository currently contains 28 `draft` skills, 3 agent instruction contracts, and 20 forward-test fixtures. `draft` is an explicit skill maturity label, not a claim of production stability. Skills move to `beta` or `stable` only when supported by realistic use evidence under the [quality rubric](./docs/quality-rubric.md).
 
 ## Repository Map
 
@@ -153,6 +185,7 @@ The catalog currently contains 28 `draft` skills and 20 forward-test fixtures. `
 .
 |-- catalog.json                 # Machine-readable registry
 |-- catalog.schema.json          # Catalog schema
+|-- agent-instructions/          # Persistent agent behavior contracts
 |-- docs/                        # Architecture, catalog, policies, and usage
 |-- examples/                    # Inspectable examples and artifact shapes
 |-- forward-tests/               # Manual forward-test prompts and pass criteria
